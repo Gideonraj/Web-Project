@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Expense Tracker</h2>
+
+        <!-- Balance and Savings -->
+        <div class="balance">
+            Balance: $<span id="balance">0.00</span>
+        </div>
+        <div class="balance" style="color:#2980b9;">
+            Savings: $<span id="savings">0.00</span>
+        </div>
+
+        <!-- Transaction Form -->
+        <form id="transaction-form">
+            <input type="text" id="desc" placeholder="Description" required>
+            <input type="number" id="amount" placeholder="Amount" required>
+            <select id="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+                <option value="savings">Savings</option>
+            </select>
+            <button type="submit">Add</button>
+        </form>
+
+        <!-- Data Section: Transactions and Chart -->
+        <div class="data-section">
+            <!-- Transaction List -->
+            <ul id="transactions"></ul>
+
+            <!-- Pie Chart -->
+            <canvas id="expenseChart" width="300" height="300"></canvas>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
